@@ -1,0 +1,12 @@
+export 'index/index.dart';
+export 'home/home.dart';
+export 'home/home_desktop.dart';
+export 'home/home_mobile.dart';
+export 'home/home_tablet.dart';
+export 'about/about.dart';
+export 'about/about_desktop.dart';
+export 'about/about_mobile.dart';
+export 'about/about_tablet.dart';
+export 'contact/contact.dart';
+export 'contact/contact_desktop.dart';
+export 'contact/contact_mobile.dart';
