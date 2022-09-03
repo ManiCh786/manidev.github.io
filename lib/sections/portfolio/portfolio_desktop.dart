@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
+import 'package:myportfolio/controllers/controller.dart';
 import '../../configs/configs.dart';
+import '../../widgets/video_card.dart';
+import '../../widgets/video_playerwidget.dart';
 import '../../widgets/widgets.dart';
 
 class PortfolioDesktop extends StatelessWidget {
-  const PortfolioDesktop({Key? key}) : super(key: key);
-
+  PortfolioDesktop({Key? key}) : super(key: key);
+  final customVideoPlayerController = CustomVideoPlayerController();
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -34,19 +37,27 @@ class PortfolioDesktop extends StatelessWidget {
             runSpacing: height * 0.05,
             alignment: WrapAlignment.center,
             crossAxisAlignment: WrapCrossAlignment.center,
-            children: ProjectUtils.banners
+            children: ProjectUtils.checkIsVideo
                 .asMap()
                 .entries
                 .map(
-                  (e) => ProjectCard(
-                    cardWidth: Dimensions.width300 + Dimensions.width100,
-                    cardHeight: Dimensions.height250 + Dimensions.height10,
-                    banner: e.value,
-                    projectTitle: ProjectUtils.titles[e.key],
-                    projectDescription: ProjectUtils.description[e.key],
-                    projectIcon: ProjectUtils.icons[e.key],
-                    projectLink: ProjectUtils.links[e.key],
-                  ),
+                  (e) => ProjectUtils.checkIsVideo[e.key] == "true"
+                      ? VideoCard(
+                          cardWidth: Dimensions.width300 + Dimensions.width100,
+                          cardHeight:
+                              Dimensions.height250 + Dimensions.height10,
+                          projectTitle: 'Uploading More Projects Soon !',
+                        )
+                      : ProjectCard(
+                          cardWidth: Dimensions.width300 + Dimensions.width100,
+                          cardHeight:
+                              Dimensions.height250 + Dimensions.height10,
+                          banner: ProjectUtils.banners[e.key],
+                          projectTitle: ProjectUtils.titles[e.key],
+                          projectDescription: ProjectUtils.description[e.key],
+                          projectIcon: ProjectUtils.icons[e.key],
+                          projectLink: ProjectUtils.links[e.key],
+                        ),
                 )
                 .toList(),
           ),

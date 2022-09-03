@@ -38,8 +38,8 @@ class ContactMobile extends StatelessWidget {
                 Padding(
               padding: const EdgeInsets.symmetric(vertical: 15.0),
               child: ProjectCard(
-                cardHeight: Dimensions.height250,
-                cardWidth: Dimensions.width300 + 100,
+                cardHeight: Dimensions.height200,
+                cardWidth: Dimensions.width300 + Dimensions.width100,
                 projectIconData: StaticUtils.contactIcon[i],
                 projectTitle: StaticUtils.titles[i],
                 projectDescription: StaticUtils.details[i],

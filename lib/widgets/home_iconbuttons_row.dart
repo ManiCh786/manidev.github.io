@@ -17,29 +17,29 @@ class HomeIconButtonsRow extends StatelessWidget {
           icon: FontAwesomeIcons.facebook,
           onTap: () => openUrl(StaticUtils.socialLinks[0]),
           iconSize: Responsive.isDesktop(context)
-              ? Dimensions.iconSize45
-              : Dimensions.iconSize30,
+              ? Dimensions.iconSize60
+              : Dimensions.iconSize45,
         ),
         HomeIconButton(
           icon: FontAwesomeIcons.instagram,
           onTap: () => openUrl(StaticUtils.socialLinks[1]),
           iconSize: Responsive.isDesktop(context)
-              ? Dimensions.iconSize45
-              : Dimensions.iconSize30,
+              ? Dimensions.iconSize60
+              : Dimensions.iconSize45,
         ),
         HomeIconButton(
           icon: FontAwesomeIcons.twitter,
           onTap: () => openUrl(StaticUtils.socialLinks[2]),
           iconSize: Responsive.isDesktop(context)
-              ? Dimensions.iconSize45
-              : Dimensions.iconSize30,
+              ? Dimensions.iconSize60
+              : Dimensions.iconSize45,
         ),
         HomeIconButton(
           icon: FontAwesomeIcons.github,
           onTap: () => openUrl(StaticUtils.socialLinks[3]),
           iconSize: Responsive.isDesktop(context)
-              ? Dimensions.iconSize45
-              : Dimensions.iconSize30,
+              ? Dimensions.iconSize60
+              : Dimensions.iconSize45,
         ),
       ],
     );

@@ -9,6 +9,7 @@ var routes = [
     bindings: [
       ThemeBinding(),
       ScrollBinding(),
+      CustomVideoPlayerBinding(),
     ],
     page: () => Index(),
   ),

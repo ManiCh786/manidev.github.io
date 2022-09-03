@@ -7,3 +7,4 @@ export 'spacer_x.dart';
 export 'tech_widget.dart';
 export 'name_age_text_widget.dart';
 export 'project_card.dart';
+export 'video_card.dart';

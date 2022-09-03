@@ -45,6 +45,8 @@ class _ServicesDesktopState extends State<ServicesDesktop> {
                 .entries
                 .map(
                   (e) => ServiceCard(
+                    cardHeight: Dimensions.height250,
+                    cardWidth: Dimensions.width300,
                     serviceIcon: StaticUtils.servicesIcons[e.key],
                     serviceTitle: StaticUtils.servicesTitles[e.key],
                     serviceDescription: StaticUtils.servicesDescription[e.key],

@@ -33,6 +33,8 @@ class ServicesMobile extends StatelessWidget {
           itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0),
             child: ServiceCard(
+              cardHeight: Dimensions.height200,
+              cardWidth: Dimensions.width300 + Dimensions.width100,
               serviceIcon: StaticUtils.servicesIcons[i],
               serviceTitle: StaticUtils.servicesTitles[i],
               serviceDescription: StaticUtils.servicesDescription[i],

@@ -98,8 +98,9 @@ class HeaderLogo extends StatelessWidget {
         },
         child: Image.asset(
           StaticUtils.myLogo,
-          color: Colors.red,
-          height: Dimensions.height45,
+          // color: Colors.red,
+          height: Dimensions.height30,
+          width: Dimensions.width45,
         ),
         // child: RichText(
         //     text: TextSpan(children: [

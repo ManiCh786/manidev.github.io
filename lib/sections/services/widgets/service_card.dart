@@ -11,11 +11,15 @@ class ServiceCard extends StatefulWidget {
       {Key? key,
       required this.serviceIcon,
       required this.serviceTitle,
-      required this.serviceDescription})
+      required this.serviceDescription,
+      required this.cardHeight,
+      required this.cardWidth})
       : super(key: key);
   final String serviceIcon;
   final String serviceTitle;
   final String serviceDescription;
+  final double cardHeight;
+  final double cardWidth;
 
   @override
   State<ServiceCard> createState() => _ServiceCardState();
@@ -57,8 +61,10 @@ class _ServiceCardState extends State<ServiceCard> {
 
   Container cardFrontSide() {
     return Container(
-      width: Dimensions.width300,
-      height: Dimensions.height200,
+      // width: Dimensions.width300,
+      // height: Dimensions.height200,
+      width: widget.cardWidth,
+      height: widget.cardHeight,
       padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
       decoration: BoxDecoration(
         color: themeController.isDarkOn() ? Colors.grey[900] : Colors.white,

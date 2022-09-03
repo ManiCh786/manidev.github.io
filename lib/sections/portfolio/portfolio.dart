@@ -14,9 +14,9 @@ class Portfolio extends StatelessWidget {
   Widget build(BuildContext context) {
     return Responsive(
       key: myScrollController.portfolioKey,
-      desktop: const PortfolioDesktop(),
-      tablet: const PortfolioMobile(),
-      mobile: const PortfolioMobile(),
+      desktop: PortfolioDesktop(),
+      tablet: PortfolioMobile(),
+      mobile: PortfolioMobile(),
     );
   }
 }

@@ -9,6 +9,6 @@ void openUrl(String url) {
   try {
     launchUrl(Uri.parse(url));
   } on Exception catch (_) {
-    print('never reached');
+    print('never reached  the url');
   }
 }

@@ -7,8 +7,8 @@ class StaticUtils {
   // photosmhjuhiu
   static const String mobilePhoto = 'assets/photos/mani_mobile.png';
   static const String maniColorBg = 'assets/photos/maniColorBg.jpeg';
-  static const String maniwhitebg = 'assets/photos/maniwhitebg.svg';
-  static const String myLogo = "assets/photos/mylogo.png";
+  static const String maniwhitebg = 'assets/photos/maniwhitebg.png';
+  static const String myLogo = "assets/photos/logo512.png";
 
 // About Me
   static const String aboutMeHeadline =

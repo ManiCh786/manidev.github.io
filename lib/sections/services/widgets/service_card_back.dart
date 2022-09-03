@@ -27,7 +27,7 @@ class ServiceCardBackWidget extends StatelessWidget {
         ),
         SizedBox(
           height: Dimensions.height45,
-          width: 130,
+          width: Dimensions.width100 + Dimensions.width30,
           child: MaterialButton(
             color: Colors.red,
             onPressed: () => contactDialogue(context),
@@ -64,7 +64,7 @@ class ServiceCardBackWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   MaterialButton(
-                    height: 40.0,
+                    height: Dimensions.height10 + Dimensions.height30,
                     onPressed: () {},
                     color: const Color(0xff34CB62),
                     child: Row(
@@ -90,7 +90,7 @@ class ServiceCardBackWidget extends StatelessWidget {
                   ),
                   const SpacerY(),
                   MaterialButton(
-                    height: 40.0,
+                    height: Dimensions.height10 + Dimensions.height30,
                     onPressed: () {},
                     color: const Color(0xff13A800),
                     child: Row(

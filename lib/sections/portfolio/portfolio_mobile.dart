@@ -2,10 +2,14 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 import '../../configs/configs.dart';
+import '../../controllers/videoplayer_controller.dart';
+import '../../widgets/video_playerwidget.dart';
 import '../../widgets/widgets.dart';
 
 class PortfolioMobile extends StatelessWidget {
-  const PortfolioMobile({Key? key}) : super(key: key);
+  PortfolioMobile({Key? key}) : super(key: key);
+  bool isVideoPlaying = false;
+  final customVideoPlayerController = CustomVideoPlayerController();
 
   @override
   Widget build(BuildContext context) {
@@ -34,15 +38,21 @@ class PortfolioMobile extends StatelessWidget {
             itemBuilder: (BuildContext context, int itemIndex, int i) =>
                 Padding(
               padding: const EdgeInsets.symmetric(vertical: 15.0),
-              child: ProjectCard(
-                cardWidth: Dimensions.width300 + 200,
-                cardHeight: Dimensions.height250 + 70,
-                banner: ProjectUtils.banners[i],
-                projectIcon: ProjectUtils.icons[i],
-                projectLink: ProjectUtils.links[i],
-                projectTitle: ProjectUtils.titles[i],
-                projectDescription: ProjectUtils.description[i],
-              ),
+              child: ProjectUtils.checkIsVideo[i] == "true"
+                  ? VideoCard(
+                      cardWidth: Dimensions.width300 + Dimensions.width100,
+                      cardHeight: Dimensions.height250 + Dimensions.height10,
+                      projectTitle: 'Uploading More Projects Soon !',
+                    )
+                  : ProjectCard(
+                      cardWidth: Dimensions.width300 + Dimensions.width100,
+                      cardHeight: Dimensions.height250,
+                      banner: ProjectUtils.banners[i],
+                      projectIcon: ProjectUtils.icons[i],
+                      projectLink: ProjectUtils.links[i],
+                      projectTitle: ProjectUtils.titles[i],
+                      projectDescription: ProjectUtils.description[i],
+                    ),
             ),
             options: CarouselOptions(
               pauseAutoPlayOnTouch: true,

@@ -25,7 +25,7 @@ class HomeTablet extends StatelessWidget {
                 offset: const Offset(0, 0),
                 delay: const Duration(seconds: 1),
                 duration: const Duration(milliseconds: 800),
-                child: SvgPicture.asset(
+                child: Image.asset(
                   StaticUtils.maniwhitebg,
                   height: size.width < 1200
                       ? size.height * 0.75
