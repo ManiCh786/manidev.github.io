@@ -20,7 +20,7 @@ class StaticUtils {
   static const kTools = [
     "Flutter",
     "Dart",
-    "PHP",
+    "PHP Core","LARAVEL",
     "C#",
     "C++",
   ];
